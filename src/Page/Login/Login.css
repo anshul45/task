@@ -1,0 +1,54 @@
+.Container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+.heading{
+font-size: 32px;
+font-weight: bold;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+ input{
+    background-color: inherit;
+    color: inherit;
+    width: 600px;
+    padding: 7px 3px;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    border-radius: 10px;
+    font-size: inherit;
+}
+input::placeholder{
+    color: #FFFFFF;
+    font-size: inherit;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+ button{
+    background-color: #6741D9;
+    color: inherit;
+    width: 607px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+p{
+    text-align: center;
+    cursor: pointer;
+}
