@@ -2,37 +2,13 @@ import React from "react";
 import {
   BarChart,
   Bar,
-  Rectangle,
   XAxis,
   Tooltip,
   ResponsiveContainer,
   YAxis,
 } from "recharts";
 
-const data = [
-  {
-    name: "category_6",
-    value: 100,
-  },
-  {
-    name: "category_7",
-    value: 80,
-  },
-  {
-    name: "category_8",
-    value: 60,
-  },
-  {
-    name: "category_9",
-    value: 40,
-  },
-  {
-    name: "category_10",
-    value: 20,
-  },
-];
-
-const Chart = () => {
+const Chart = ({ data }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart

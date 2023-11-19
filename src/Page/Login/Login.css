@@ -20,7 +20,7 @@ font-weight: bold;
     background-color: inherit;
     color: inherit;
     width: 600px;
-    padding: 7px 3px;
+    padding: 8px 5px;
     border: 1px solid #FFFFFF;
     outline: none;
     border-radius: 10px;
@@ -40,7 +40,7 @@ input::placeholder{
  button{
     background-color: #6741D9;
     color: inherit;
-    width: 607px;
+    width: 610px;
     padding: 10px;
     border: none;
     border-radius: 10px;

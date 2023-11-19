@@ -32,17 +32,26 @@
     display: flex;
    align-items: center;
    gap: 5px;
-   cursor: pointer;
 }
 
 .admin_div_radio input{
     width: 17px;
+    background-color: #FFFFFF;
 }
+
+.admin_div_radio input[type="radio"]:checked  {
+    color: #6741D9; 
+  }
 
 .admin_input{
     width: 300px;
     color: inherit;
     text-align: center;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .custom_price{
@@ -65,5 +74,8 @@
 }
 
 .admin_button:hover{
+    border: 1px solid #F0C3F1;
+}
+.admin_button:active{
     border: 1px solid #F0C3F1;
 }
