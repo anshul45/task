@@ -33,6 +33,7 @@ const Admin = () => {
   };
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
   const transformAmountData = () => {
     if (!data || !data.amount || typeof data.amount !== "object") {
