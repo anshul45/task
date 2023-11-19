@@ -2,8 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./Admin.css";
 import Chart from "../../componets/Chart/Chart";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
+  const [authToken, setAuthToken] = useState(
+    localStorage.getItem("auth_token")
+  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!authToken) {
+      navigate("/login");
+    }
+    // eslint-disable-next-line
+  }, [authToken, navigate]);
   const [data, setData] = useState("");
   const [inputValue, setInputValue] = useState(null || "");
   const getData = async () => {

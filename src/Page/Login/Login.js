@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const navigate = useNavigate();
   const [username, SetuserName] = useState("");
@@ -23,18 +24,17 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       if (error.response) {
-        if (error.response) {
-          const { data } = error.response;
-          let errorMessage = "Login failed. Please try again.";
+        const { data } = error.response;
+        let errorMessage = "Login failed. Please try again.";
 
-          if (data && data.ui_err_msg) {
-            errorMessage = data.ui_err_msg;
-          } else errorMessage = data.username || data.password;
-          setErrorMsg(errorMessage);
-        }
+        if (data && data.ui_err_msg) {
+          errorMessage = data.ui_err_msg;
+        } else errorMessage = data.username || data.password;
+        setErrorMsg(errorMessage);
       }
     }
   };
+
   return (
     <div className="Container">
       <div className="heading">Venue Admin Login</div>

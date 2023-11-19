@@ -5,19 +5,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Page/Error/ErrorPage";
 
 const App = () => {
-  const PrivateRoute = ({ path, element }) => {
-    const authToken = localStorage.getItem("auth_token");
-    if (!authToken || (authToken.length === 0 && path !== "/login")) {
-      return <Login />;
-    }
-
-    return element;
-  };
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PrivateRoute path="/" element={<Admin />} />,
-      errorElement: <PrivateRoute element={<ErrorPage />} />,
+      element: <Admin />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/login",
